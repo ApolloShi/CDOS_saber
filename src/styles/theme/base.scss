@@ -1,0 +1,147 @@
+.theme-base {
+  .el-menu--popup {
+    .el-menu-item {
+      background-color: #fff;
+      i,
+      span {
+        color: #666;
+      }
+      &:hover {
+        i,
+        span {
+          color: #333;
+        }
+      }
+      &.is-active {
+        background-color: #409eff;
+        &:before {
+          content: "";
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 4px;
+          background: #409eff;
+          position: absolute;
+        }
+        i,
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .avue-header,
+  .avue-logo,
+  .tags-container {
+    background-color: var(--topbar-bg);
+  }
+  .avue-sidebar--tip {
+    background-color: transparent;
+    color: #333;
+  }
+  .el-dropdown {
+    color: #fff;
+  }
+  .avue-logo_title {
+    font-weight: 400;
+    color: #fff;
+  }
+  .logo_title,
+  .avue-breadcrumb {
+    color: #fff;
+    i {
+      color: #fff;
+    }
+  }
+  .avue-top {
+    .el-menu-item {
+      i,
+      span {
+        color: #fff;
+      }
+      &:hover {
+        i,
+        span {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .avue-sidebar {
+    box-shadow: 2px 0 6px rgba(0, 21, 41, 0.15);
+    background-color: #fff;
+    padding-top: 70px;
+    .el-submenu.is-active>.el-submenu__title:first-child {
+      background-color: var(--sidebar-open);
+      i, span {
+        color: var(--sidebar-open-text);
+      }
+    }
+    .el-menu-item,
+    .el-submenu__title {
+      i,
+      span {
+        color: #666;
+      }
+      &:hover {
+        background: transparent;
+        i,
+        span {
+          color: #333;
+        }
+      }
+      &.is-active {
+        background-color: var(--sidebar-active);
+        i,
+        span {
+          color: var(--sidebar-active-text);
+        }
+        &:before {
+          background-color: var(--primary)
+        }
+      }
+    }
+  }
+  .top-search {
+    .el-input__inner {
+      color: #333;
+    }
+    input::-webkit-input-placeholder,
+    textarea::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: #fff;
+    }
+    input:-moz-placeholder,
+    textarea:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #fff;
+    }
+    input::-moz-placeholder,
+    textarea::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #fff;
+    }
+    input:-ms-input-placeholder,
+    textarea:-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: #fff;
+    }
+  }
+  .top-bar__item {
+    i {
+      color: #fff;
+    }
+  }
+  // element
+  .el-radio-button__orig-radio:checked+.el-radio-button__inner {
+    color: #FFF;
+    background-color: var(--primary);
+    border-color: var(--primary);
+    -webkit-box-shadow: -1px 0 0 0 var(--primary);
+    box-shadow: -1px 0 0 0 var(--primary);
+  }
+  .avue-tags .el-tabs--card > .el-tabs__header .el-tabs__item.is-active {
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+  }
+}
