@@ -1,20 +1,15 @@
-import {
-  setStore,
-  getStore,
-  removeStore
-} from '@/util/store'
-import website from '@/config/website'
+import { setStore, getStore, removeStore } from "@/util/store";
+import website from "@/config/website";
 
 const common = {
-
   state: {
-    language: getStore({name: 'language'}) || 'zh',
+    language: getStore({ name: "language" }) || "zh",
     isCollapse: false,
     isFullScren: false,
     isMenu: true,
     isShade: false,
     screen: -1,
-    isLock: getStore({name: 'isLock'}) || false,
+    isLock: getStore({ name: "isLock" }) || false,
     showTag: true,
     showDebug: true,
     showCollapse: true,
@@ -24,18 +19,26 @@ const common = {
     showTheme: true,
     showMenu: true,
     showColor: true,
-    colorName: getStore({name: 'colorName'}) || '#409EFF',
-    themeName: getStore({name: 'themeName'}) || 'theme-default',
-    lockPasswd: getStore({name: 'lockPasswd'}) || '',
+    colorName: getStore({ name: "colorName" }) || "#409EFF",
+    themeName: getStore({ name: "themeName" }) || "default",
+    // themeName: getStore({ name: "themeName" }) || "theme-fireWall",
+    tableThemeName:
+      getStore({ name: "tableThemeName" }) || "theme-table-striped",
+    lockPasswd: getStore({ name: "lockPasswd" }) || "",
     website: website,
+    appLoader: false,
   },
   mutations: {
+    CHANGE_APP_LOADER: (state, active) => {
+      console.log("CHANGE_APP_LOADER", active);
+      state.appLoader = active;
+    },
     SET_LANGUAGE: (state, language) => {
-      state.language = language
+      state.language = language;
       setStore({
-        name: 'language',
-        content: state.language
-      })
+        name: "language",
+        content: state.language,
+      });
     },
     SET_SHADE: (state, active) => {
       state.isShade = active;
@@ -52,10 +55,10 @@ const common = {
     SET_LOCK: (state) => {
       state.isLock = true;
       setStore({
-        name: 'isLock',
+        name: "isLock",
         content: state.isLock,
-        type: 'session'
-      })
+        type: "session",
+      });
     },
     SET_SCREEN: (state, screen) => {
       state.screen = screen;
@@ -63,37 +66,44 @@ const common = {
     SET_COLOR_NAME: (state, colorName) => {
       state.colorName = colorName;
       setStore({
-        name: 'colorName',
+        name: "colorName",
         content: state.colorName,
-      })
+      });
     },
     SET_THEME_NAME: (state, themeName) => {
       state.themeName = themeName;
       setStore({
-        name: 'themeName',
+        name: "themeName",
         content: state.themeName,
-      })
+      });
+    },
+    SET_TABLE_THEME_NAME: (state, tableThemeName) => {
+      state.tableThemeName = tableThemeName;
+      setStore({
+        name: "tableThemeName",
+        content: state.tableThemeName,
+      });
     },
     SET_LOCK_PASSWD: (state, lockPasswd) => {
       state.lockPasswd = lockPasswd;
       setStore({
-        name: 'lockPasswd',
+        name: "lockPasswd",
         content: state.lockPasswd,
-        type: 'session'
-      })
+        type: "session",
+      });
     },
     CLEAR_LOCK: (state) => {
       state.isLock = false;
-      state.lockPasswd = '';
+      state.lockPasswd = "";
       removeStore({
-        name: 'lockPasswd',
-        type: 'session'
+        name: "lockPasswd",
+        type: "session",
       });
       removeStore({
-        name: 'isLock',
-        type: 'session'
+        name: "isLock",
+        type: "session",
       });
     },
-  }
-}
-export default common
+  },
+};
+export default common;

@@ -3,27 +3,30 @@
  * @Author: 石亮亮
  * @Date: 2023-02-22 09:38:00
  * @LastEditors: 石亮亮
- * @LastEditTime: 2023-02-22 10:11:24
- * @FilePath: /study/Users/shiliangliang/6cloud/saber/src/views/dome/jurisdiction.vue
+ * @LastEditTime: 2023-02-22 16:00:29
+ * @FilePath: /study/Users/shiliangliang/6cloud/CDOS_saber/src/views/dome/jurisdiction.vue
 -->
 <template>
-  <el-row class="jurisdiction">
-    <el-button
-      type="primary"
-      v-show="vaildData(permission.jurisdiction_primary_btn, false)"
-      >主要按钮</el-button
-    >
-    <el-button
-      type="success"
-      v-show="vaildData(permission.jurisdiction_success_btn, false)"
-      >成功按钮</el-button
-    >
-    <el-button
-      type="danger"
-      v-show="vaildData(permission.jurisdiction_danger_btn, false)"
-      >危险按钮</el-button
-    >
-  </el-row>
+  <basic-container>
+    <el-row class="jurisdiction">
+      <h2>单个文件按钮权限</h2>
+      <el-button
+        type="primary"
+        v-show="vaildData(permission.jurisdiction_primary_btn, false)"
+        >主要按钮</el-button
+      >
+      <el-button
+        type="success"
+        v-show="vaildData(permission.jurisdiction_success_btn, false)"
+        >成功按钮</el-button
+      >
+      <el-button
+        type="danger"
+        v-show="vaildData(permission.jurisdiction_danger_btn, false)"
+        >危险按钮</el-button
+      >
+    </el-row>
+  </basic-container>
 </template>
 <script>
 import { mapGetters } from "vuex";

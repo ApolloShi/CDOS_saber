@@ -3,14 +3,14 @@
  * @Author: 石亮亮
  * @Date: 2023-02-22 09:38:00
  * @LastEditors: 石亮亮
- * @LastEditTime: 2023-02-22 10:45:11
- * @FilePath: /study/Users/shiliangliang/6cloud/saber/src/views/dome/jurisdiction3.vue
+ * @LastEditTime: 2023-02-22 16:02:15
+ * @FilePath: /study/Users/shiliangliang/6cloud/CDOS_saber/src/views/dome/jurisdiction3.vue
 -->
 <template>
-  <div>
+  <basic-container>
     权限3页面
     <authorizationBtn :componentName="componentName" />
-  </div>
+  </basic-container>
 </template>
 <script>
 import authorizationBtn from "./components/authorizationBtn.vue";
