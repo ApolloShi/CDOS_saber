@@ -5,9 +5,10 @@
  * @email: shiliangliang@6cloudtech.com
  * @Date: 2021-11-19 10:41:21
  * @LastEditors: 石亮亮
- * @LastEditTime: 2023-02-22 15:20:46
+ * @LastEditTime: 2023-02-23 17:07:25
  * @FilePath: /study/Users/shiliangliang/6cloud/CDOS_saber/src/styles/theme/AiSec.scss
  */
+ 
 .theme-fireWall {
   .noPadding {
     .el-card .el-card__body,
@@ -105,9 +106,6 @@
       line-height: 40px;
     }
   }
-  .top-search .el-input .el-input__inner {
-    color: var(--color-white);
-  }
   .el-menu--horizontal > .el-menu-item.is-active {
     border-bottom: 2px solid #eb5855;
   }
@@ -148,56 +146,10 @@
     padding: 0 45px;
     // min-width: 170px;
     // width: 170px;
-    font-family: 'Source Han Sans SC';
+    font-family: "Source Han Sans SC";
 
     font-size: 14px;
     color: #eb5855;
-  }
-  .avue-sidebar .el-menu-item.is-active,
-  .avue-sidebar .el-submenu__title.is-active {
-    background: rgba(96, 96, 96, 0.1) !important;
-    color: #eb5855;
-    border-radius: 3px;
-    .iconfont,
-    span {
-      color: #eb5855 !important;
-    }
-  }
-
-  .avue-sidebar .el-menu-item:hover {
-    background: rgba(96, 96, 96, 0.1) !important;
-    color: #eb5855;
-    border-radius: 3px;
-    .iconfont,
-    span {
-      color: #eb5855 !important;
-    }
-  }
-  .avue-sidebar .el-menu-item:hover:before {
-    background: #eb5855;
-    border-radius: 3px 0 0 3px;
-    content: '';
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 4px;
-    position: absolute;
-  }
-
-  .avue-sidebar .el-submenu__title:hover {
-    background: #eb5855 !important;
-    border-radius: 3px;
-    .iconfont,
-    span,
-    .el-submenu__icon-arrow,
-    .el-icon-arrow-down {
-      color: var(--color-white) !important;
-    }
-  }
-  .avue-sidebar .el-menu-item.is-active:before,
-  .avue-sidebar .el-submenu__title.is-active:before {
-    background: #eb5855;
-    border-radius: 3px 0 0 3px;
   }
 
   .el-menu--popup {
@@ -221,7 +173,7 @@
         // background-color: var(--color-primary);
         background-color: #eb5855;
         &:before {
-          content: '';
+          content: "";
           top: 0;
           left: 0;
           bottom: 0;
@@ -243,10 +195,10 @@
     // background-color: var(--color-primary);
     background-color: #20222a;
   }
-  .avue-sidebar--tip {
-    background-color: transparent;
-    color: #333;
-  }
+  // .avue-sidebar--tip {
+  //   background-color: transparent;
+  //   color: #333;
+  // }
   .el-dropdown {
     color: var(--color-white);
   }
@@ -261,6 +213,7 @@
       color: var(--color-white);
     }
   }
+  // 顶部导航菜单
   .avue-top {
     .el-menu-item {
       i,
@@ -274,11 +227,67 @@
         }
       }
     }
+    .top-bar__item {
+      line-height: 60px;
+      i {
+        font-size: 18px;
+        color: var(--color-white);
+      }
+    }
   }
+  // 左侧导航菜单
   .avue-sidebar {
     box-shadow: 2px 0 6px rgba(0, 21, 41, 0.15);
     background-color: var(--color-white);
     padding-top: 64px;
+
+    .el-menu-item.is-active,
+    .el-submenu__title.is-active {
+      background: rgba(96, 96, 96, 0.1) !important;
+      color: #eb5855;
+      border-radius: 3px;
+      .iconfont,
+      span {
+        color: #eb5855 !important;
+      }
+    }
+
+    .el-menu-item:hover {
+      background: rgba(96, 96, 96, 0.1) !important;
+      color: #eb5855;
+      border-radius: 3px;
+      .iconfont,
+      span {
+        color: #eb5855 !important;
+      }
+    }
+    .el-menu-item:hover:before {
+      background: #eb5855;
+      border-radius: 3px 0 0 3px;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 4px;
+      position: absolute;
+    }
+
+    .el-submenu__title:hover {
+      background: #eb5855 !important;
+      border-radius: 3px;
+      .iconfont,
+      span,
+      .el-submenu__icon-arrow,
+      .el-icon-arrow-down {
+        color: var(--color-white) !important;
+      }
+    }
+    .el-menu-item.is-active:before,
+    .el-submenu__title.is-active:before {
+      background: #eb5855;
+      border-radius: 3px 0 0 3px;
+    }
+
     .el-menu-item,
     .el-submenu__title {
       i,
@@ -302,7 +311,11 @@
       }
     }
   }
+  // 顶部搜索框
   .top-search {
+    .el-input .el-input__inner {
+      color: var(--color-white);
+    }
     .el-input__inner {
       color: #333;
     }
@@ -327,13 +340,7 @@
       color: var(--color-white);
     }
   }
-  .top-bar__item {
-    line-height: 60px;
-    i {
-      font-size: 18px;
-      color: var(--color-white);
-    }
-  }
+  // 内容tags
   .avue-tags__box {
     .el-tabs__item.is-active {
       position: relative;
@@ -343,7 +350,7 @@
       color: #eb5855 !important;
       border-top: 1px solid #f1f2f6 !important;
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         z-index: 1000;
         top: -1px;
@@ -356,7 +363,7 @@
         border-radius: 8px 0 0 0px;
       }
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         box-shadow: 10px 10px 5px #888888 !important;
         -webkit-box-shadow: 3px 3px 3px #888888 !important;
@@ -396,7 +403,7 @@
         }
       }
       &:before {
-        content: '';
+        content: "";
         position: absolute;
         top: -1px;
         left: -15px;
@@ -408,7 +415,7 @@
         border-radius: 8px 0 0 0;
       }
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         z-index: 100;
         box-shadow: 10px 10px 5px #888888 !important;
@@ -447,7 +454,10 @@
       -webkit-transform-origin: 100% 50%;
       transform-origin: 100% 50%;
     }
-    .el-tabs--card > .el-tabs__header .el-tabs__item:nth-child(1) .el-icon-close {
+    .el-tabs--card
+      > .el-tabs__header
+      .el-tabs__item:nth-child(1)
+      .el-icon-close {
       display: none;
     }
   }
@@ -633,7 +643,7 @@
       border-bottom: 1px solid #d7d7d7;
       height: 50px;
       text-indent: 15px;
-      font-family: 'Source Han Sans SC';
+      font-family: "Source Han Sans SC";
 
       font-size: 14px;
       color: #000000;
