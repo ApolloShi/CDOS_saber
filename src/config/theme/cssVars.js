@@ -2,7 +2,7 @@
  * @Author: 周楠楠
  * @Date: 2022-06-23 15:10:23
  * @LastEditors: 石亮亮
- * @LastEditTime: 2023-02-22 15:37:45
+ * @LastEditTime: 2023-02-24 11:28:09
  * @Description: 用来存储不同主题下的css变量
  */
 
@@ -14,15 +14,33 @@ const baseSize = {
   // 背景色
   "--initial": "#409eff",
   "--link": "#409eff",
+  // top
+  "--avue-logo": "#20222a",
+  "--avue-logo-text": "#fff",
 
-  // 左边菜单
-  "--sidebar-item": "#fff",
-  "--sidebar-active": "rgba(96,96,96,0.1)",
-  "--sidebar-active-text": "#eb5855",
-  "--sidebar-open": "#eb5855",
+  // 左边菜单默认文本颜色
+  "--sidebar-text": "#fff",
+  // 左边菜单默认背景
+  "--sidebar-bg": "#20222a",
+  // 左边菜单title选中文本
+  "--sidebar-title-hover-text": "#fff",
+  // 左边菜单title选中背景
+  "--sidebar-title-hover-bg": "#409eff",
+  // 左边菜单item选中文本
+  "--sidebar-active-text": "#409eff",
+  //  左边菜单item选中左边before红线
+  "--sidebar-active-before": "#409eff",
+  // 左边菜单item选中背景
+  "--sidebar-active-bg": "rgba(96,96,96,0.1)",
+  // 当前打开的顶部菜单样式
+  "--sidebar-open": "#409eff",
   "--sidebar-open-text": "#fff",
+  // 导航收起状态
+  "--sidebar-popup-bg": "#409eff",
+  "--sidebar-popup-text": "#666",
+  "--sidebar-popup-active-text": "#fff",
   // 上侧菜单
-  "--topbar-bg": "#20222a",
+  "--top-bar-bg": "#20222a",
 
   // 背景色
   "--color-main-bg": "#f0f2f5",
@@ -151,5 +169,30 @@ export const theme = {
   },
   fireWallTheme: {
     ...baseSize,
+    "--avue-logo": "20222a",
+    "--avue-logo-text": "fff",
+    // 左边菜单默认文本颜色
+    "--sidebar-text": "#20222a",
+    // 左边菜单默认背景
+    "--sidebar-bg": "#fff",
+    // 左边菜单title选中文本
+    "--sidebar-title-hover-text": "#fff",
+    // 左边菜单title选中背景
+    "--sidebar-title-hover-bg": "#eb5855",
+    // 左边菜单item选中文本
+    "--sidebar-active-text": "#eb5855",
+    //  左边菜单item选中左边before红线
+    "--sidebar-active-before": "#eb5855",
+    // 左边菜单item选中背景
+    "--sidebar-active-bg": "rgba(96,96,96,0.1)",
+    // 当前打开的顶部菜单样式
+    "--sidebar-open": "#eb5855",
+    "--sidebar-open-text": "#fff",
+    // 导航收起状态
+    "--sidebar-popup-bg": "#eb5855",
+    "--sidebar-popup-text": "#666",
+    "--sidebar-popup-active-text": "#fff",
+    // 上侧菜单
+    "--top-bar-bg": "#20222a",
   },
 };

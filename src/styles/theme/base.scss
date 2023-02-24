@@ -33,7 +33,7 @@
   .avue-header,
   .avue-logo,
   .tags-container {
-    background-color: var(--topbar-bg);
+    background-color: var(--top-bar-bg);
   }
   .avue-sidebar--tip {
     background-color: transparent;
@@ -71,9 +71,10 @@
     box-shadow: 2px 0 6px rgba(0, 21, 41, 0.15);
     background-color: #fff;
     padding-top: 70px;
-    .el-submenu.is-active>.el-submenu__title:first-child {
+    .el-submenu.is-active > .el-submenu__title:first-child {
       background-color: var(--sidebar-open);
-      i, span {
+      i,
+      span {
         color: var(--sidebar-open-text);
       }
     }
@@ -97,7 +98,7 @@
           color: var(--sidebar-active-text);
         }
         &:before {
-          background-color: var(--primary)
+          background-color: var(--primary);
         }
       }
     }
@@ -133,8 +134,8 @@
     }
   }
   // element
-  .el-radio-button__orig-radio:checked+.el-radio-button__inner {
-    color: #FFF;
+  .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+    color: #fff;
     background-color: var(--primary);
     border-color: var(--primary);
     -webkit-box-shadow: -1px 0 0 0 var(--primary);
